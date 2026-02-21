@@ -39,27 +39,29 @@
 #     Função para calcular a média dos valores em uma lista
 #     '''
 #     resultado = sum(lista_1) / len(lista_1)
-#     return print(resultado)
+#     return resultado
 
-# media_da_lista(lista_teste)
-
+# resultado = media_da_lista(lista_teste)
+# print(resultado)
 
 # 2) Filtrar dados acima de um limite
 
 
-# Usando list comprehension
+## Usando list comprehension
 # def filtrar_dados_acima(n_limite : float, lista : list[float]) -> list:
 #     '''
 #     Lista para filtrar números acima de um limite
 #     '''
 #     resultado = [x for x in lista if x > n_limite]
-#     return print(resultado)
+#     return resultado
 
 
 # lista_01 = [1,10,3,20,50,30,0]
-# filtrar_dados_acima(5, lista_01)
+# resultado = filtrar_dados_acima(5, lista_01)
+# print(resultado)
 
-# 2) Usando loop for
+## Usando loop for
+
 # def filtrar_dados_acima(n_limite : float, lista : list[float]) -> list:
 #     '''
 #     Lista para filtrar números acima de um limite
@@ -68,20 +70,86 @@
 #     for valor in lista:
 #         if valor > n_limite:
 #             resultado.append(valor)
-#     return print(resultado)
+#     return resultado
 
 # lista_01 = [1,10,3,20,50,30,0]
-# filtrar_dados_acima(1, lista_01)
-
+# resultado = filtrar_dados_acima(1, lista_01)
+# print(resultado)
 
 # 3) Contar valores únicos em uma lista
 
-def valores_unicos_na_lista (lista : list[float]) -> list[float]:
-    '''
-    Função para selecionar valores únicos em uma lista
-    '''
-    return print(set(lista))
+# def valores_unicos_na_lista (lista : list[float]) -> list[float]:
+#     '''
+#     Função para selecionar valores únicos em uma lista
+#     '''
+#     return set(lista)
 
-lista_01 = [1, 2, 2, 3, 4, 4, 5]
-valores_unicos_na_lista(lista_01)
+# lista_01 = [1, 2, 2, 3, 4, 4, 5]
+# resultado = valores_unicos_na_lista(lista_01)
+# print(resultado)
+
+
+# 4) Converter celsius para farenheit em uma lista
+
+## Usando loop for
+
+# def converter_lista_de_celsius_em_farenheit(lista : list[float]) -> list[float]:
+#     '''
+#     Função para converter números de uma lista em celsius para farenheit
+#     '''
+#     lista_farenheit = []
+#     for valor in lista:
+#         t_farenheit = ((valor * 9/5) + 32)
+#         lista_farenheit.append(t_farenheit)
+#     return lista_farenheit
+
+# lista_celsius = [32.5,25,15.5,30,20]
+
+# resultado = converter_lista_de_celsius_em_farenheit(lista_celsius)
+# print(resultado)
+
+
+## Usando list comprehension
+
+# def converter_lista_de_celsius_em_farenheit(lista : list[float]) -> list[float]:
+#     return [(valor * 9/5) + 32 for valor in lista]
+
+# lista_celsius = [32.5,25,15.5,30,20]
+# resultado = converter_lista_de_celsius_em_farenheit(lista_celsius)
+# print(resultado)
+
+
+# 5) Calcular desvio padrão de uma lista
+
+# import math
+
+# def desvio_padrão_de_lista (lista : list[float]) -> list[float]:
+#     '''
+#     Função para calcular o desvio padrão de uma lista
+#     '''
+#     media = sum(lista) / len(lista)
+#     variancia =  sum((valor - media)**2 for valor in lista) / len(lista)
+#     return math.sqrt(variancia) 
+
+# lista_01 = (5,10,15,20,25,30)
+# resultado = desvio_padrão_de_lista(lista_01)
+# print(resultado)
+
+
+# 6) Encontrar valores ausentes em uma sequencia
+
+def encontrar_valores_ausentes(sequencia: list[int]) -> list[int]:
+    '''
+    Função para encontrar valores ausentes em uma lista
+    '''
+    completo = set(range(min(sequencia), max(sequencia) + 1))
+    return list(completo - set(sequencia))
+
+lista01 = [1,2,5,8,10]
+resultado = encontrar_valores_ausentes(lista01)
+print(resultado)
+
+
+
+
 
