@@ -138,16 +138,16 @@
 
 # 6) Encontrar valores ausentes em uma sequencia
 
-def encontrar_valores_ausentes(sequencia: list[int]) -> list[int]:
-    '''
-    Função para encontrar valores ausentes em uma lista
-    '''
-    completo = set(range(min(sequencia), max(sequencia) + 1))
-    return list(completo - set(sequencia))
+# def encontrar_valores_ausentes(sequencia: list[int]) -> list[int]:
+#     '''
+#     Função para encontrar valores ausentes em uma lista
+#     '''
+#     completo = set(range(min(sequencia), max(sequencia) + 1))
+#     return list(completo - set(sequencia))
 
-lista01 = [1,2,5,8,10]
-resultado = encontrar_valores_ausentes(lista01)
-print(resultado)
+# lista01 = [1,2,5,8,10]
+# resultado = encontrar_valores_ausentes(lista01)
+# print(resultado)
 
 
 
